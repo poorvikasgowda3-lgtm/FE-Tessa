@@ -1,0 +1,38 @@
+Client Understanding:
+- Build an MVP blogging platform where authors can publish articles with category tags and users can read them.
+- Chosen track: Track B - Algorithmic Model with Content-Based Filtering.
+- Algorithm bias: Positive Bias (Affinity Routing) so the feed favors tags the user interacts with most, surfacing more of the same topic areas.
+
+Creative Freedoms:
+- Product Name: "Tessa Pulse" - a modern digital publishing platform focused on discovery and author-driven storytelling.
+- Theme: clean editorial magazine style with tag chips, card-based articles, and a personal feed panel.
+- UI layout: top navigation with Feed / Write / Tags, featured article cards, and a personalized recommendation feed for logged-in users.
+- Affinity model design: use tag weight accumulation from clicks/reads and score articles by matching tags.
+- Author experience: lightweight article editor with up to 3 category tags and publish scheduling.
+
+Assumptions:
+- Users must log in to unlock the personalized recommendation feed.
+- Authors can attach up to 3 tags per article.
+- Tags are a mix of category and topical labels (e.g., Tech, Culture, Wellness, Finance).
+- Every article includes title, summary, body, author, publish date, and tags.
+- User interactions include article views and click-throughs; those are used to build tag affinity.
+- The MVP will support public reading for non-logged-in users and personalized feed for logged-in users.
+
+Feature List:
+- User Authentication: register, login, and session management for readers and authors.
+- Author Role: create/update/delete articles with tag metadata.
+- Article CRUD: publish articles with title, summary, body, and tags.
+- Tagging System: structured tag selection, article-tag associations, and tag filtering.
+- Personalized Feed: algorithmic content-based ranking using tag affinity.
+- Affinity Tracking: record user interactions to weight preferred tags over time.
+- Global Chronological Feed: fallback feed to show latest published content for new or anonymous users.
+- Responsive UI: mobile-first article browsing and reader experience.
+- Discoverability: tag-based filtering and trending tag highlights.
+- Feed Explainability: show users why articles were recommended (based on favorite tags).
+
+Client Questions:
+- Should the recommendation feed be available only after login, or also for anonymous users via local/session storage?
+- Do you want a fixed tag taxonomy, or should authors be able to create custom tags freely?
+- What is the minimum expected author workflow: quick publish only, or preview + drafts + scheduling?
+- How important is it to support multiple author roles or editorial approval in the MVP?
+- Do you want a future version to include a Contrarian/Diversity routing option as a second feed mode?
